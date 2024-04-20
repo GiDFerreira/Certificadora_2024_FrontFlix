@@ -83,14 +83,38 @@ nav a{
 .sobre-mim{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     height: 600px;
     padding: 3rem 6rem;
 }
 
+.sobre-mim h2{
+    font-size: 24px;
+}
+
+.sobre-mim--cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 4.5rem;
+    align-items: center;
+}
+
 .sobre-mim--card{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 180px;
     background-color: var(--light-gray);
+}
+
+.sobre-mim--card--texto{
+    padding: 2rem;
+}
+
+.sobre-mim--card img{
+    width: 200px;
+    height: 100%;
 }
 
 .projetos{
