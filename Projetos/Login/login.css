@@ -28,7 +28,7 @@ main {
     left: 50%;
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 545px;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
@@ -64,7 +64,7 @@ div#forms > p {
     padding-bottom: 10px;
 }
 
-form > div.campo {
+div#form > div.campo {
     width: 100%;
     height: 40px;
     margin: 5px 0px; 
@@ -113,7 +113,7 @@ a#iforgot {
 }
 
 p#error-email, p#error-password {
-    font-size: 0.7em;
+    font-size: 0.6em;
     color: red;
 }
 
@@ -152,7 +152,7 @@ p#footer-message {
         font-size: 0.8em;
     }
 
-    form {
+    div#form {
         margin-top: 20px;
     }
 
@@ -196,11 +196,11 @@ p#footer-message {
         text-align: center;
     }
 
-    form {
+    div#form {
         margin-top: 20px;
     }
 
-    form > input#isubmit {
+    input#isubmit {
         margin-top: 50px;
         height: 35px;
     }
