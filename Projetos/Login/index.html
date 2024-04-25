@@ -28,7 +28,7 @@
                             <input type="email" name="email" id="iemail" placeholder="you@email.com" autocomplete="email" required maxlength="30">
                             
                         </div>
-                        <!-- <p id="error-email">sdfkmsdfp</p> -->
+                        <p id="error-email"></p>
                         <div class="campo">
                             <label for="isenha">
                                 <span id="key" class="material-symbols-rounded">
@@ -37,9 +37,9 @@
                             </label>
                             <input type="password" name="senha" id="isenha" placeholder="* * * * * * * *" autocomplete="current-password" required minlength="8" maxlength="12">
                         </div>
-                        <!-- <p id="error-password">sdfkmsdfp</p> -->
+                        <p id="error-password"></p>
 
-                        <input id="isubmit" type="submit" value="Submit">
+                        <input id="isubmit" type="submit" value="Submit" onclick="acessar(event)">
                         <a id="iforgot" href="esqueci.html" target="blank">Did you forget your password?</a>
                         
                 </form>
@@ -50,5 +50,7 @@
     <footer>
         <p id="footer-message">Desenvolvido com amor por FrontFlix</p>
     </footer>
+
+    <script src="validation.js"></script>
 </body>
 </html>
