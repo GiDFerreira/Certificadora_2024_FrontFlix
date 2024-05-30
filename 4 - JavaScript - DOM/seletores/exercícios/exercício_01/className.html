@@ -1,0 +1,34 @@
+<!--
+getElementsByClassName: Você está trabalhando em uma página HTML que contém vários parágrafos com a mesma classe.
+Sua tarefa é selecionar todos os parágrafos com a classe especificada e exibir o conteúdo no console.
+Se o conteúdo do parágrafo estiver vazio ou consistir apenas em espaços, substitua-o por um texto padrão antes de exibir no console.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+<body>
+    <p class="commonParagraph">Primeiro parágrafo com a mesma classe.</p>
+    <p class="commonParagraph">Segundo parágrafo com a mesma classe.</p>
+    <p class="commonParagraph"></p>
+    <p class="commonParagraph">Quarto parágrafo com a mesma classe.</p>
+
+    <script>
+        var paragraphs = document.getElementsByClassName("commonParagraph");
+        console.log(paragraphs);
+
+        for (var i = 0; i < paragraphs.length; i++) {
+
+            if(paragraphs[i].textContent.trim() === '') {
+                paragraphs[i].textContent = 'Texto padrão';
+            }
+
+            console.log(paragraphs[i].textContent);
+        }
+    </script>
+</body>
+</html>
