@@ -1,0 +1,37 @@
+<!--
+getElementsByTagName: Em uma página HTML, existem vários elementos <p> e <li>. Sua tarefa é acessar todos os elementos <p> e <li>, e exibir o conteúdo de cada um no console. Se o conteúdo de um elemento <p> ou <li> contiver a palavra "importante", envolva-o com um asterisco * no início e no fim antes de exibir no console.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Intermediário 2: getElementsByTagName</title>
+</head>
+<body>
+    <p>Primeiro parágrafo importante.</p>
+    <p>Segundo parágrafo.</p>
+    <ul>
+        <li>Primeiro item da lista importante.</li>
+        <li>Segundo item da lista.</li>
+    </ul>
+
+    <script>
+        function showAndMarkContent(elements, keyword) {
+            for (var i = 0; i < elements.length; i++) {
+                var content = elements[i].textContent;
+                if (content.includes(keyword)) {
+                    content = `*${content}*`;
+                }
+                console.log(content);
+            }
+        }
+
+        var paragraphs = document.getElementsByTagName("p");
+        var listItems = document.getElementsByTagName("li");
+
+        showAndMarkContent(paragraphs, "importante");
+        showAndMarkContent(listItems, "importante");
+    </script>
+</body>
+</html>
