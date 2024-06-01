@@ -2,6 +2,8 @@
 getElementsByClassName: Você está trabalhando em uma página HTML que contém vários parágrafos com a mesma classe.
 Sua tarefa é selecionar todos os parágrafos com a classe especificada e exibir o conteúdo no console.
 Se o conteúdo do parágrafo estiver vazio ou consistir apenas em espaços, substitua-o por um texto padrão antes de exibir no console.
+
+Dica: pesquise sobre textContent e o método trim() do JavaScript!
 -->
 
 <!DOCTYPE html>
@@ -18,17 +20,6 @@ Se o conteúdo do parágrafo estiver vazio ou consistir apenas em espaços, subs
     <p class="commonParagraph">Quarto parágrafo com a mesma classe.</p>
 
     <script>
-        var paragraphs = document.getElementsByClassName("commonParagraph");
-        console.log(paragraphs);
-
-        for (var i = 0; i < paragraphs.length; i++) {
-
-            if(paragraphs[i].textContent.trim() === '') {
-                paragraphs[i].textContent = 'Texto padrão';
-            }
-
-            console.log(paragraphs[i].textContent);
-        }
     </script>
 </body>
 </html>

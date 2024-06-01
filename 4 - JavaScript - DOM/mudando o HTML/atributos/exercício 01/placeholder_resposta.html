@@ -1,0 +1,45 @@
+<!--
+placeholder: Adicione um script em JavaScript para exibir dicas baseadas no texto digitado em um campo de entrada.
+- Interatividade:
+    - Se o texto começar com 'a', exibir "amor, amora, azul...".
+    - Se começar com qualquer outra letra ou caractere (e não estiver vazio), exibir "uma dica misteriosa!".
+    - Se o campo estiver vazio, ocultar o parágrafo de dicas.
+
+Dica: pesquise sobre ao método startsWith() e também sobre a propriedade 'style' do JavaScript!
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dica Detalhada</title>
+    <style>
+        #hint {
+            color: gray;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Digite algo...">
+    <p id="hint">Esta é uma dica detalhada para o campo de entrada.</p>
+
+    <script>
+        var inputField = document.getElementById("inputField");
+        var hint = document.getElementById("hint");
+
+        inputField.addEventListener("input", function() {
+            if (inputField.value.startsWith('a')) {
+                hint.textContent = "amor, amora, azul..."
+                hint.style.display = "block";
+            } else if(!inputField.value.startsWith('a') && inputField.value.trim() !== '') {
+                hint.textContent = "uma dica misteriosa!"
+                hint.style.display = "block";
+            } else {
+                hint.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

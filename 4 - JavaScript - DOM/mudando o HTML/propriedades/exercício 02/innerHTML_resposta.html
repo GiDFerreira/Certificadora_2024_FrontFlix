@@ -1,0 +1,81 @@
+<!--
+innerHTML: Você está criando um sistema de FAQ (Perguntas Frequentes) onde os usuários podem clicar em uma pergunta para ver a resposta. Crie uma funcionalidade onde ao clicar em uma pergunta, a resposta correspondente é exibida abaixo da pergunta usando innerHTML.
+
+
+Respostas que devem ter FAQ:
+    - Para a pergunta "O que é HTML?", a resposta deve ser -> "HTML (HyperText Markup Language) é a linguagem padrão para criar páginas web."
+
+    - Para a pergunta "O que é CSS?", a resposta deve ser -> "CSS (Cascading Style Sheets) é uma linguagem de estilo utilizada para descrever a apresentação de um documento escrito em HTML ou XML."
+
+    - Para a pergunta "O que é JavaScript?", a resposta deve ser -> "JavaScript é uma linguagem de programação que permite a criação de conteúdo web dinâmico."
+
+    - Para a pergunta "O que é DOM?", a resposta deve ser -> "O DOM (Document Object Model) é uma interface de programação que representa documentos HTML e XML como uma árvore de objetos, permitindo a manipulação dinâmica de seu conteúdo e estrutura."
+
+Dica: pesquise sobre 'forEach()', 'objeto de chave e valor' e 'array function' do JavaScript para fazer esse exercício!
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ com innerHTML</title>
+    <style>
+        .question {
+            cursor: pointer;
+            color: blue;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FAQ</h1>
+    <div class="faq-item">
+        <div class="question">O que é HTML?</div>
+        <div class="answer"></div>
+    </div>
+    <div class="faq-item">
+        <div class="question">O que é CSS?</div>
+        <div class="answer"></div>
+    </div>
+    <div class="faq-item">
+        <div class="question">O que é JavaScript?</div>
+        <div class="answer"></div>
+    </div>
+    <div class="faq-item">
+        <div class="question">O que é DOM?</div>
+        <div class="answer"></div>
+    </div>
+
+    <script>
+        var faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+            var question = item.querySelector(".question");
+            var answer = item.querySelector(".answer");
+
+            question.addEventListener("click", function() {
+                if (answer.style.display === "none" || answer.style.display === "") {
+                    answer.innerHTML = obterResposta(question.textContent);
+                    answer.style.display = "block";
+                } else {
+                    answer.style.display = "none";
+                }
+            });
+        });
+
+        function obterResposta(pergunta) {
+            var respostas = {
+                "O que é HTML?": "HTML (HyperText Markup Language) é a linguagem padrão para criar páginas web.",
+                "O que é CSS?": "CSS (Cascading Style Sheets) é uma linguagem de estilo utilizada para descrever a apresentação de um documento escrito em HTML ou XML.",
+                "O que é JavaScript?": "JavaScript é uma linguagem de programação que permite a criação de conteúdo web dinâmico.",
+                "O que é DOM?": "O DOM (Document Object Model) é uma interface de programação que representa documentos HTML e XML como uma árvore de objetos, permitindo a manipulação dinâmica de seu conteúdo e estrutura."
+            };
+            return respostas[pergunta] || "Resposta não encontrada.";
+        }
+    </script>
+</body>
+</html>

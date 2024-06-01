@@ -1,0 +1,43 @@
+<!--
+Você está desenvolvendo um contador de cliques e deseja estilizá-lo para que pareça mais atraente. Cada vez que o usuário clica em um botão, o contador aumenta e a cor de fundo do contador muda para uma cor aleatória. Use JavaScript para adicionar um evento de clique ao botão que aumenta o contador e altera o estilo do contador.
+
+Dica: pesquise sobre Math.floor, Math.random e também sobre o método toString() do JavaScript!
+    - Obs: o valor máximo para cores em hexadecimal é o da cor branca (#FFFFFF). Em decimal isso fica: 16777215
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3: Criando um Contador de Cliques Estilizado</title>
+    <style>
+        #counter {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">0</div>
+    <button id="incrementButton">Incrementar</button>
+
+    <script>
+        var counter = document.getElementById("counter");
+        var incrementButton = document.getElementById("incrementButton");
+        var clickCount = 0;
+
+        incrementButton.addEventListener("click", function() {
+            clickCount++;
+            counter.textContent = clickCount;
+            var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            counter.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 <!--
 getElementsByTagName: Em uma página HTML, existem vários elementos <p> e <li>. Sua tarefa é acessar todos os elementos <p> e <li>, e exibir o conteúdo de cada um no console. Se o conteúdo de um elemento <p> ou <li> contiver a palavra "importante", envolva-o com um asterisco * no início e no fim antes de exibir no console.
+
+Dica: pesquise sobre o método includes() e também sobre 'template string' do JavaScript!
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -17,13 +19,6 @@ getElementsByTagName: Em uma página HTML, existem vários elementos <p> e <li>.
     </ul>
 
     <script>
-        function consoleExibitor(elements, keyword) {
-            for(var i = 0; i < elements.length; i++) {
-                if(elements[i].includes(keyword)){
-                    elements[i].textContent = `${"*" keyword "*" }`;
-                }
-            }
-        }
     </script>
 </body>
 </html>
