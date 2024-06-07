@@ -10,9 +10,9 @@
     <header>
         <h1>Nome da Pessoa</h1>
         <nav>
-            <a href="">Sobre mim</a>
-            <a href="">Projetos</a>
-            <a href="">Contatos</a>
+            <a href="#about-me">Sobre mim</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contatos</a>
         </nav>
     </header>
     <main>
@@ -20,11 +20,11 @@
             <div class="home--texto">
                 <p class="home--texto-saudacao">Olá, meu nome é Tchunflay, prazer em te conhecer</p>
                 <p class="home--texto-desc">Sou uma pessoa muito poggers e gosto muito de scragbadun</p>
-                <button>Baixar CV</button>
+                <button id="downloadCV">Baixar CV</button>
             </div>
             <img src="assets/foto de perfil.png" alt="foto de fulano">
         </div>
-        <div class="sobre-mim">
+        <div class="sobre-mim" id="about-me">
             <h1>Um pouco mais sobre mim</h1>
             <div class="sobre-mim--cards">
                 <div class="sobre-mim--card">
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <div class="projetos">
+        <div class="projetos" id="projects">
             <h1>Meus projetos</h1>
             <div class="projetos--cards">
                 <div class="projetos--card">
@@ -72,7 +72,7 @@
     </main>
     <footer>
         <h1>Entre em contato</h1>
-        <div class="contato--dados">
+        <div class="contato--dados" id="contact">
             <p>scragbadun@gmail.com</p>
             <p>Linkedin</p>
             <p>Perfil do github</p>
@@ -82,5 +82,6 @@
             <p>Desenvolvido com amor por <a href="#">FrontFlix</a></p>
         </div>
     </footer>
+    <script src="javascript.js"></script>
 </body>
 </html>

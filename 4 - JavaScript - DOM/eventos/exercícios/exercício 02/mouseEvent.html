@@ -60,16 +60,16 @@ Dica: pesquise sobre createElement(), propriedades 'className', 'textContent', '
         var items = document.querySelectorAll('.item-container .item');
 
         items.forEach(item => {
-            const description = document.createElement("div");
+            var description = document.createElement('div');
             description.className = 'description';
-            description.textContent = 'Descrição do' + item.textContent;
+            description.textContent = 'Descrição do ' + item.textContent;
             item.appendChild(description);
 
-            item.addEventListener('mouseover', function(){
+            item.addEventListener('mouseover', function() {
                 description.style.display = 'block';
             })
 
-            item.addEventListener('mouseout', function(){
+            item.addEventListener('mouseout', function() {
                 description.style.display = 'none';
             })
         })
