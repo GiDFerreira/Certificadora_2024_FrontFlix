@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: red;
+}
+
+p span {
+    font-size: 30px;
+}
+
+h2 ~ p {
+    color: purple;
+}
+
+ul > li {
+    color: blue;
+}
