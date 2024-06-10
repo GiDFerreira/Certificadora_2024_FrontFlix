@@ -1,7 +1,7 @@
 # Responsividade
 
 ## Vídeo-Aula
-Acesse [aqui]() a vídeo-aula dessa aula.
+Acesse [aqui](https://drive.google.com/file/d/1gUQSFTSFUOOpZ4NBfwpfbvl9woo8KgIT/view?usp=sharing) a vídeo-aula dessa aula.
 
 ## Material 
 Acesse [aqui](https://docs.google.com/document/d/1zP6G-hkmMqzzsB6rpa9qkcPB0gXdONl7tuQ8tbOWfqc/edit?usp=sharing) o material em .doc para copiar e editar!
