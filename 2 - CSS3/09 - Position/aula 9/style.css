@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main{
+    height: 2000px;
+}
+
+.vermelho {
+    background-color: red;
+    position: static;
+}
+
+.azul {
+    background-color: blue;
+    position: relative;
+    top:50px;
+    left: 50px;
+}
+
+.verde {
+    background-color: green;
+    position: sticky;
+    top: 10px;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+}
