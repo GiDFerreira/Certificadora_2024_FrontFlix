@@ -1,0 +1,18 @@
+.texto1{
+    display: none;
+}
+
+.texto3{
+    display: inline;
+}
+
+li {
+    display: block;
+    float: right;
+    list-style: none;
+    padding: 2%;
+}
+
+a {
+    text-decoration: none;
+}

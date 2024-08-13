@@ -1,0 +1,33 @@
+<!--
+readonly: Adicione um script em JavaScript para alternar entre os modos de edição e visualização de um campo de texto (<input>). O HTML já está fornecido.
+
+Tarefa:
+    - Quando o botão for clicado, alternar entre os modos de edição e visualização do campo de entrada.
+    - Se o campo estiver em modo de edição (editável), o botão deve exibir "Salvar".
+    - e o campo estiver em modo de visualização (não editável), o botão deve exibir "Editar".
+
+Dica: pesquise sobre a propriedade readOnly e operador ternário do JavaScript!
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo de Texto Editável</title>
+</head>
+<body>
+    <input type="text" id="editableInput" value="Texto Somente Leitura" readonly>
+    <button id="editButton">Editar</button>
+
+    <script>
+        var editableInput = document.getElementById("editableInput");
+        var editButton = document.getElementById("editButton");
+
+        editButton.addEventListener("click", function() {
+            editableInput.readOnly = !editableInput.readOnly;
+            editButton.textContent = editableInput.readOnly ? "Editar" : "Salvar";
+        });
+    </script>
+</body>
+</html>

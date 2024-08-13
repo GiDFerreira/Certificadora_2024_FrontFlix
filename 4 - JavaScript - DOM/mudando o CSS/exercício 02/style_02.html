@@ -1,0 +1,61 @@
+<!--
+Quando o botão "Adicionar Quadrado" for clicado, deve-se adicionar um novo quadrado colorido (de 100x100 pixels) na área designada. Cada quadrado deve ter uma cor de fundo inicial aleatória. Ao clicar em um quadrado, ele deve mudar para uma nova cor aleatória.
+
+Dica: pesquise sobre o método classList() do JavaScript!
+Obs: reveja também sobre createElement() e appendChild!
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Cores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #game-area {
+            width: 80%;
+            height: 500px;
+            border: 2px solid black;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo de Cores</h1>
+    <button id="add-square-btn">Adicionar Quadrado</button>
+    <div id="game-area"></div>
+
+    <script>
+        buttonAdd = document.getElementById('add-square-btn');
+
+        buttonAdd.addEventListener('click', function() {
+            var square = document.createElement('div');
+            square.classList.add('square');
+            setRandomColor(square);
+
+            square.addEventListener('click', () => setRandomColor(square));
+            document.getElementById('game-area').appendChild(square);
+
+        });
+
+        function setRandomColor(element) {
+            var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            element.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>

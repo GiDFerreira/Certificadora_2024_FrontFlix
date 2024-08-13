@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+p {
+    color: red;
+}
+
+@media (max-width: 425px) {
+    p {
+        color: blue;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 769px){
+    p {
+        color: pink;
+    }
+}

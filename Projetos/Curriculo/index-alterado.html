@@ -10,62 +10,78 @@
     <header>
         <h1>Nome da Pessoa</h1>
         <nav>
-            <a href="">Sobre mim</a>
-            <a href="">Projetos</a>
-            <a href="">Contatos</a>
+            <a href="#about-me">Sobre mim</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contatos</a>
         </nav>
     </header>
     <main>
         <div class="home">
-            <p>Olá, meu nome é Tchunflay, prazer em te conhecer</p>
-            <p>Sou uma pessoa muito poggers e gosto muito de scragbadun</p>
-            <button>Baixar CV</button>
-            <img src="" alt="">
+            <div class="home--texto">
+                <p class="home--texto-saudacao">Olá, meu nome é Tchunflay, prazer em te conhecer</p>
+                <p class="home--texto-desc">Sou uma pessoa muito poggers e gosto muito de scragbadun</p>
+                <button id="downloadCV">Baixar CV</button>
+            </div>
+            <img src="assets/foto de perfil.png" alt="foto de fulano">
         </div>
-        <div class="sobre-mim">
+        <div class="sobre-mim" id="about-me">
             <h1>Um pouco mais sobre mim</h1>
-            <div class="sobre-mim--card">
-                <h2>Algum hobby</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat
-                </p>
-            </div>
-            <div class="sobre-mim--card">
-                <h2>Foco no estudo de fullstack</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat
-                </p>
+            <div class="sobre-mim--cards">
+                <div class="sobre-mim--card">
+                    <div class="sobre-mim--card--texto">
+                        <h2>Algum hobby</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat
+                        </p>
+                    </div>
+                    <img src="assets/Imagens e ícones.png" alt="">
+                </div>
+                <div class="sobre-mim--card">
+                    <div class="sobre-mim--card--texto">
+                        <h2>Foco no estudo de fullstack</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat
+                        </p>
+                    </div>
+                    <img src="assets/Imagens e ícones.png" alt="">
+                </div>
             </div>
         </div>
-        <div class="projetos">
+        <div class="projetos" id="projects">
             <h1>Meus projetos</h1>
-            <div>
-                <h2>Nome do projeto 1</h2>
-                <button>Visualizar</button>
-            </div>
-            <div>
-                <h2>Nome do projeto 2</h2>
-                <button>Visualizar</button>
-            </div>
-            <div>
-                <h2>Nome do projeto 3</h2>
-                <button>Visualizar</button>
+            <div class="projetos--cards">
+                <div class="projetos--card">
+                    <img src="assets/Imagens e ícones.png" alt="">
+                    <h2>Nome do projeto 1</h2>
+                    <button><a href="#">Visualizar</a></button>
+                </div>
+                <div class="projetos--card">
+                    <img src="assets/Imagens e ícones.png" alt="">
+                    <h2>Nome do projeto 2</h2>
+                    <button><a href="#">Visualizar</a></button>
+                </div>
+                <div class="projetos--card">
+                    <img src="assets/Imagens e ícones.png" alt="">
+                    <h2>Nome do projeto 3</h2>
+                    <button><a href="#">Visualizar</a></button>
+                </div>
             </div>
         </div>
     </main>
     <footer>
         <h1>Entre em contato</h1>
-        <div>
+        <div class="contato--dados" id="contact">
             <p>scragbadun@gmail.com</p>
             <p>Linkedin</p>
             <p>Perfil do github</p>
         </div>
         <hr>
-        <div>
-            <p>Desenvolvido com amor por FrontFlix</p>
+        <div class="contato--creditos">
+            <p>Desenvolvido com amor por <a href="#">FrontFlix</a></p>
         </div>
     </footer>
+    <script src="javascript.js"></script>
 </body>
 </html>

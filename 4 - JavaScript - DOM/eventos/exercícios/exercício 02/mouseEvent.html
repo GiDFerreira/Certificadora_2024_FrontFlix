@@ -1,0 +1,79 @@
+<!--
+Você foi designado para criar uma página web que contém uma lista de itens. Quando o usuário passar o mouse sobre qualquer item, um parágrafo descritivo deve ser adicionado abaixo desse item. Quando o mouse sair do item, o parágrafo descritivo deve ser removido.
+
+Dica: pesquise sobre createElement(), propriedades 'className', 'textContent', 'style.display' e também sobre forEach() e appendChild() para utilizar nesse exercício.
+--> 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Interativa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .item-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px;
+        }
+
+        .item {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            position: relative; 
+            margin-bottom: 40px;
+        }
+
+        .item:hover {
+            background-color: #dcdcdc;
+        }
+
+        .description {
+            display: none;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-left: 3px solid #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="item-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+
+    <script>
+        var items = document.querySelectorAll('.item-container .item');
+
+        items.forEach(item => {
+            var description = document.createElement('div');
+            description.className = 'description';
+            description.textContent = 'Descrição do ' + item.textContent;
+            item.appendChild(description);
+
+            item.addEventListener('mouseover', function() {
+                description.style.display = 'block';
+            })
+
+            item.addEventListener('mouseout', function() {
+                description.style.display = 'none';
+            })
+        })
+    </script>
+
+</body>
+</html>

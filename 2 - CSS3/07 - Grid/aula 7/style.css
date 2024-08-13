@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+div {
+    background-color: chocolate;
+    border: solid 2px black;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "cabeçalho cabeçalho cabeçalho cabeçalho"
+    "aside principal principal principal"
+    "footer footer footer footer";
+}
+
+.cabeçalho {
+    grid-area: cabeçalho;
+    height: 150px;
+}
+
+.aside {
+    grid-area: aside;
+    height: 300px;
+}
+
+.principal {
+    grid-area: principal;
+    height: 300px;
+}
+
+.footer {
+    grid-area: footer;
+    height: 100px;
+}
